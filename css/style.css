@@ -586,16 +586,21 @@ h1 {
   margin-top: 20px;
 }
 .button {
-  width: 280px;
+  margin-bottom: 10px;
+  width: 285px;
   height: 36px;
   padding: 9px;
+  margin-left: 2%;
 }
 .button_content{
-  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  justify-content: flex-start;
+  margin-left: 12%;
 }
 .button_icon {
-  width: 23px;
-  margin-right: 5%;  
+  width: 23px;  
 }
 .button_text {
   font-size: 10px;
@@ -701,30 +706,74 @@ h2 {
   border-bottom: 3px solid #8f7bc8;
 }  
 .footer {
-  height: 568px;
+  height: 566px;
+   min-width: 320px;
+   width: 100%;
   background-image: url(../images/game_767.jpg); 
 }
 .footer:before {
-  min-height: 568px;
+  content: "";
+  min-width: 320px;
+  width: 100%;
+  min-height: 566px;
 }
 .footer_content {
-  min-height: 568px;
+  min-height: 566px;
+  width: 100%;
 }
 .download_app_button {
-  width: 70px;
-  height: 70px;
+  width: 74px;
+  height: 74px;
 }
 .download_text {
   margin-left: 0;
-  margin-top: 58px;
+  width: 100%;
+  margin-bottom: 15%;
+}
+.logo {
+	padding-top: 9%;
+}	
+.logo_icon {
+width: 137px;
 }
 .logo_icon_app {
-  width: 56px;
+  width: 58px;
 }
 .app_head {
   font-size: 32px;
 }
+.app_text_area {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
 .app_text {
   font-size: 14px;
+  letter-spacing: 0.7px;
+}
+.app_block {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+    width: 95%;	
+}
+.app_button_area {
+	margin-top: 18%;
+    margin-bottom: 15%;
+}
+.app_head_area {
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+.app_head {
+	font-size: 32px;
+    line-height: 1.5em;
+    letter-spacing: 2px;
+}
+.buttons {
+width: 100%;
 }
 }
