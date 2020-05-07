@@ -1,3 +1,8 @@
+body {
+  	background-color: #fff;
+  	margin: 0;
+	padding: 0;
+}
 *,
 *::after, 
 *::before {
@@ -29,7 +34,6 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 962px;
   width: 100%;
   background-image: url(../images/football_1920.jpg);
   background-repeat: no-repeat;
@@ -80,16 +84,19 @@ p {
   width: 100%;
 }
 .next_title {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  width: 100%;
-  margin-left: 14%;
+	font-size: 90px;
+	font-family: "OpenSans-Bold", sans-serif;
+	font-weight: 600;
+	color: #fff;
+	text-transform: uppercase;
+  	display: block;
+  	width: 100%;
+  	margin-left: 16%;
 }
 h1 {
   display: flex;
   font-size: 90px;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   font-family: "OpenSans-Bold", sans-serif;
   margin: 0;
@@ -116,7 +123,7 @@ h1 {
   margin: 2.5%;
   color: white;
   font-size: 14px;
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition: box-shadow 0.5s, transform 0.3s;
 }
 .button_content{
   display: flex;
@@ -135,7 +142,11 @@ h1 {
   font-family: "OpenSans-Regular", sans-serif;
   font-weight: 300;
 }
-
+.button_text_bottom {
+	display: block;
+	font-family: "OpenSans-Bold", sans-serif;
+	font-weight: 600;
+}
 .button:hover .button_icon {
   fill: #c1c1c1;
 }
@@ -162,10 +173,10 @@ h1 {
   box-sizing: border-box; 
   width: 100%;
 }
-.wrapper:nth-child(n+3){
+.wrapper:nth-child(n+4){
   background-color: #f6f4fa;
 }
-.wrapper:nth-child(n+4){
+.wrapper:nth-child(n+5){
   background-color: #5e42b0;
   color: white;
 }
@@ -196,28 +207,38 @@ h1 {
   justify-content: start;
   align-items: center;
 }
-.num {
+.num, .num_2 {
   font-size: 18px;
   font-family: "OpenSans-Bold", sans-serif;
   margin: 0;
   color: black;
 }
+.num:after {
+  content: "";
+  display: block;
+  border: 3px solid #8f7bc8;
+  border-radius: 4px;
+}
+.num_2:after{
+  content: "";
+  display: block;
+  border: 3px solid #fff;
+  border-radius: 4px;
+}
 .num_3 {
   color: #8f7bc8;
   margin: 0;
 }
-.underline {
-  border: 3px solid #8f7bc8;
+.num_3:after {
+  content: "";
+  display: block;
+  border: 2px solid #fff;
   border-radius: 4px;
 }
-.underline_3 {
-  border: 2px solid white;
-  border-radius: 4px;
+.heading_block {
+  width: 50%;
+  margin-left: 15px;
 }
-  .heading_block {
-    width: 50%;
-    margin-left: 15px;
-  }
 .heading {
   font-family: "OpenSans-Bold", sans-serif;
   font-size: 36px;
@@ -252,10 +273,10 @@ h1 {
   position: relative;
   width: 100%;
 }
-.container:nth-child(n+3){
+.container:nth-child(n+4){
   background-color: #f6f4fa;
 }
-.container:nth-child(n+4){
+.container:nth-child(n+5){
   background-color: #0a0e34;
   color: #fff;
 }
@@ -274,6 +295,7 @@ h1 {
   right: 13%;
   top: -7%;
   width: 50%;
+  z-index: 9999;
 }
 /* Блоки 3шт */
 .block {
@@ -341,6 +363,15 @@ h2 {
   position: absolute;
   left: calc(50% - 170px/2);
   top: calc(50% - 156px);
+  -webkit-transition: all 0.3s ease;;
+  -moz-transition: all 0.3s ease;;
+  -o-transition: all 0.3s ease;;
+  transition: all 0.3s ease;
+}
+.square:hover {
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
 }
 .count {
   font-size: 24px;
@@ -450,7 +481,7 @@ h2 {
 .header_content {
     width: 90%;
 }
- h1 {
+ h1, .next_title {
    font-size: 64px;
 }
 .buttons {
@@ -542,6 +573,12 @@ h2 {
   left: 8.5%;
   top: 51%; 
 } 
+.download_text {
+	margin: 0;
+}
+.app_text {
+  display: block;
+}
 .app_button_area {
   padding-bottom: 80px;
 }
@@ -549,7 +586,7 @@ h2 {
   display: flex;
 }
 } 
-@media (max-width: 640px){
+@media (max-width: 640px) {
 .header {
   height: 566px;
   min-width: 320px;
@@ -574,7 +611,7 @@ h2 {
 .logo_icon {
   width: 130px;
 }
-h1 {
+h1, .next_title {
   font-size: 25px;
 }
 .title_block {
@@ -706,7 +743,7 @@ h2 {
   border-bottom: 3px solid #8f7bc8;
 }  
 .footer {
-  height: 566px;
+  height: 660px;
    min-width: 320px;
    width: 100%;
   background-image: url(../images/game_767.jpg); 
@@ -715,65 +752,62 @@ h2 {
   content: "";
   min-width: 320px;
   width: 100%;
-  min-height: 566px;
+  min-height: 660px;
 }
-.footer_content {
-  min-height: 566px;
-  width: 100%;
-}
-.download_app_button {
-  width: 74px;
+  .footer_content {
+   min-height: 566px;
+    width: 100%;
+  }  
+  .app_block {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 95%;
+  }
+  .app_button_area {
+    margin-top: 18%;
+    margin-bottom: 15%;
+  }
+  .download_app_button {
+  width: 74px; 
   height: 74px;
 }
-.download_text {
-  margin-left: 0;
-  width: 100%;
-  margin-bottom: 15%;
-}
-.logo {
-	padding-top: 9%;
-}	
-.logo_icon {
-width: 137px;
-}
+
 .logo_icon_app {
   width: 58px;
 }
-.app_head {
-  font-size: 32px;
+
+.download_text {
+    margin-left: 0;
+    width: 100%;
+  margin-bottom: 15%;
 }
-.app_text_area {
-	display: flex;
+  
+  .app_head_area {
+     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+  }
+.app_head {
+  font-size: 32px;
+    line-height: 1.5em;
+    letter-spacing: 2px;
+  
 }
+  .app_text_area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
 .app_text {
   font-size: 14px;
   letter-spacing: 0.7px;
-}
-.app_block {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-    width: 95%;	
-}
-.app_button_area {
-	margin-top: 18%;
-    margin-bottom: 15%;
-}
-.app_head_area {
-	display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-}
-.app_head {
-	font-size: 32px;
-    line-height: 1.5em;
-    letter-spacing: 2px;
-}
-.buttons {
-width: 100%;
+  }
+
+.logo_icon {
+  width: 137px;
+  fill: white;
 }
 }
