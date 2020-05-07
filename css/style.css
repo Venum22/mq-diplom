@@ -91,7 +91,7 @@ p {
 	text-transform: uppercase;
   	display: block;
   	width: 100%;
-  	margin-left: 16%;
+  	margin-left: 10%;
 }
 h1 {
   display: flex;
@@ -612,15 +612,13 @@ h2 {
   width: 130px;
 }
 h1, .next_title {
-  font-size: 25px;
+  font-size: 28px;
 }
 .title_block {
   width: 90%;
 }
 .next_title{
-  flex-wrap: wrap;
-  margin-left: 20%;
-  margin-top: 20px;
+  margin-top: 4%;
 }
 .button {
   margin-bottom: 10px;
@@ -743,7 +741,7 @@ h2 {
   border-bottom: 3px solid #8f7bc8;
 }  
 .footer {
-  height: 660px;
+  height: 566px;
    min-width: 320px;
    width: 100%;
   background-image: url(../images/game_767.jpg); 
@@ -752,17 +750,16 @@ h2 {
   content: "";
   min-width: 320px;
   width: 100%;
-  min-height: 660px;
+  min-height: 566px;
 }
   .footer_content {
    min-height: 566px;
-    width: 100%;
+   
   }  
   .app_block {
-    display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     width: 95%;
+    margin: 0;
   }
   .app_button_area {
     margin-top: 18%;
@@ -779,7 +776,7 @@ h2 {
 
 .download_text {
     margin-left: 0;
-    width: 100%;
+    width: 90%;
   margin-bottom: 15%;
 }
   
@@ -791,9 +788,7 @@ h2 {
   }
 .app_head {
   font-size: 32px;
-    line-height: 1.5em;
-    letter-spacing: 2px;
-  
+  line-height: 1.5em; 
 }
   .app_text_area {
     display: flex;
@@ -803,9 +798,7 @@ h2 {
   }
 .app_text {
   font-size: 14px;
-  letter-spacing: 0.7px;
-  }
-
+}
 .logo_icon {
   width: 137px;
   fill: white;
