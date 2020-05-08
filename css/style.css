@@ -788,7 +788,8 @@ h2 {
   }
 .app_head {
   font-size: 32px;
-  line-height: 1.5em; 
+  line-height: 1.5em;
+  display: block; 
 }
   .app_text_area {
     display: flex;
