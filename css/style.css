@@ -741,7 +741,7 @@ h2 {
   border-bottom: 3px solid #8f7bc8;
 }  
 .footer {
-  height: 566px;
+  height: 600px;
    min-width: 320px;
    width: 100%;
   background-image: url(../images/game_767.jpg); 
@@ -750,18 +750,17 @@ h2 {
   content: "";
   min-width: 320px;
   width: 100%;
-  min-height: 566px;
+  min-height: 600px;
 }
-  .footer_content {
-   min-height: 566px;
-   
-  }  
-  .app_block {
-    justify-content: center;
-    width: 95%;
-    margin: 0;
-  }
-  .app_button_area {
+.footer_content {
+  min-height: 566px;  
+}  
+.app_block {
+  justify-content: center;
+  width: 95%;
+  margin: 0;
+}
+.app_button_area {
     margin-top: 18%;
     margin-bottom: 15%;
   }
