@@ -1,6 +1,6 @@
 body {
-  	background-color: #fff;
-  	margin: 0;
+  background-color: #fff;
+  margin: 0;
 	padding: 0;
 }
 *,
@@ -28,6 +28,12 @@ p {
   font-style: normal; 
   font-weight: normal;
  }
+ @font-face {
+  font-family: "OpenSans-Light";   
+  src: url(fonts/OpenSans-Light.ttf) format("ttf"); 
+  font-style: normal; 
+  font-weight: normal;
+ }
 /* Шапка */
 .header {
   display: flex;
@@ -39,20 +45,23 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center; 
+  position: relative;
 }
  .header:before{
    content: "";
    background-color: #0a0e34;
    position: absolute;
    width: 100%;
-   min-height: 962px;
    opacity: 0.9;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
 }
 .header_content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  min-height: 962px;
   position: relative;
   width: 85%;
   justify-content: center;
@@ -64,6 +73,8 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: 45px;
+  margin-bottom: 297px;
 }
 .logotip:hover .logo_icon {
   fill: #c1c1c1;
@@ -77,8 +88,6 @@ p {
   flex-wrap: wrap;
 }
 .title {
-  display: flex;
-  flex-wrap: wrap;
   font-family: "OpenSans-Bold", sans-serif;
   align-items: center;
   width: 100%;
@@ -89,12 +98,12 @@ p {
 	font-weight: 600;
 	color: #fff;
 	text-transform: uppercase;
-  	display: block;
-  	width: 100%;
-  	margin-left: 10%;
+  display: block;
+  width: 100%;
+  margin-left: 14%;
 }
 h1 {
-  display: flex;
+  display: block;
   font-size: 90px;
   color: #fff;
   text-transform: uppercase;
@@ -109,6 +118,8 @@ h1 {
   align-items: center;
   position: relative;
   width: 100%;
+  margin-top: 224px;
+  margin-bottom: 110px;
 }
 .button {
   display: flex;
@@ -250,6 +261,8 @@ h1 {
   font-family: "OpenSans-Regular", sans-serif;
   width: 75%;
   font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 2px;
 }
  h3 {
   font-size: 36px;
@@ -303,17 +316,14 @@ h1 {
  flex-wrap: wrap;
  position: relative;
  width: 100%; 
- height: auto;
 }
 .card_modul {
   display: flex; 
   flex-wrap: wrap;
   width: 50%;
-  height: auto;
 }
 .card_img {
   width: 100%;
-  height: 730px;
   background-image: url(../images/be-active_1024.jpg); 
   background-repeat: no-repeat;
   background-size: cover;
@@ -358,7 +368,6 @@ h2 {
   justify-content: center;
   align-items: center;
   width: 170px;
-  height: 156px;
   background-color: #5e42b0;
   position: absolute;
   left: calc(50% - 170px/2);
@@ -367,6 +376,7 @@ h2 {
   -moz-transition: all 0.3s ease;;
   -o-transition: all 0.3s ease;;
   transition: all 0.3s ease;
+  padding: 60px 0;
 }
 .square:hover {
   -webkit-transform: scale(1.2);
@@ -378,6 +388,8 @@ h2 {
   font-family: "OpenSans-Bold", sans-serif;
   color: #f5f6f7;
   border-bottom: 5px solid #8f7bc8;
+  margin: 0;
+  font-weight: 700;
 }
 /* Фоотер */
 .footer {
@@ -385,20 +397,19 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  height: 962px;
   width: 100%;
   background-image: url(../images/game_1920.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  position: relative;
 }
 .footer_content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  min-height: 962px;
   position: relative;
-  width: 100%;
+  width: 85%;
   justify-content: center;
 }
 .footer:before{
@@ -406,8 +417,11 @@ h2 {
    background-color:  #0a0e34;
    position: absolute;
    width: 100%;
-   min-height: 962px;
    opacity: 0.9;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
 }
 .app_block {
   display: flex;
@@ -416,7 +430,7 @@ h2 {
   justify-content: center;
   align-items: center; 
   width: 95%;
-  margin-top: 10%;
+  margin-top: 23%;
 } 
 .download_app_button {
   display: flex;
@@ -459,6 +473,10 @@ h2 {
   font-size: 32px;
   margin: 0;
 }
+.footer_buttons {
+  margin-top: 120px;
+  margin-bottom: 232px;
+}
 .logo {
   width: 70%;
   display: flex;
@@ -470,6 +488,10 @@ h2 {
   width: 190px;
   fill: #fff;
 }
+.footer_logo{
+  margin-top: 0;
+  margin-bottom: 51px;
+}
 .footer_logo:hover .logo_icon {
   fill: #c1c1c1; 
 }
@@ -477,16 +499,20 @@ h2 {
 @media (min-width: 641px) and (max-width: 960px){
 .header {
     background-image: url(../images/football_1280.jpg);
-}
-.header_content {
-    width: 90%;
+    background-size: auto;
 }
  h1, .next_title {
    font-size: 64px;
 }
+.logo {
+  margin-top: 38px;
+  margin-bottom: 179px;
+}
 .buttons {
     flex-wrap: nowrap;
     width: 100%;
+    margin-top: 296px;
+    margin-bottom: 75px;
 }
 .button {
   width: 312px;
@@ -502,6 +528,8 @@ h2 {
 .text {
   width: 90%;
   font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 1px;
 }
 .main_heading {
   width: 60%;
@@ -510,9 +538,12 @@ h2 {
   font-size: 36px;
 }
 .image {
-  top: 8%;
-  left: -23%; 
+  top: 13%;
+  left: -17%; 
   width: 60%;
+}
+.heading {
+  font-size: 32px;
 }
 .heading_area {
   margin-left: 4%;
@@ -523,10 +554,15 @@ h2 {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+.num_block {
+  font-size: 18px;
+  font-family: "OpenSans-Bold", sans-serif;
+  font-weight: 700;
+}
 .section_image {
-  right: 0;
-  top: 0;
-  width: 55%;
+  right: -10px;
+  top: -30px;
+  width: 64%;
 }
 .card_modul {
   width: 100%;
@@ -566,12 +602,13 @@ h2 {
 }
 .paragraph {
   font-size: 24px;
+  letter-spacing: 1px;
 }
 .square {
   width: 116px;
-  height: 116px;
-  left: 8.5%;
-  top: 51%; 
+  left: 7.5%;
+  top: 52%; 
+  padding: 41px 0;
 } 
 .download_text {
 	margin: 0;
@@ -585,28 +622,52 @@ h2 {
 .app_head_area {
   display: flex;
 }
+.footer_content {
+  width: 100%;
+}
+.app_block {
+  margin-top: 125px;
+}
+.button_text_top {
+  font-family: "OpenSans-Light", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.button_text_bottom {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.footer_buttons {
+  margin-top: 268px;
+  margin-bottom: 34px;
+}
+.footer_logo {
+  margin-top: 0;
+  margin-bottom: 22px;
+}
 } 
 @media (max-width: 640px) {
 .header {
-  height: 566px;
-  min-width: 320px;
   width: 100%;
   background-image: url(../images/football_767.jpg);
   background-size: cover;
   background-position: center center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header_content {
+  margin: 0 auto;
 }
 .header:before{
   content: "";
   min-width: 320px;
   width: 100%;
-  min-height: 566px;
-}
-.header_content {
-  min-height: 566px;
 }
 .logo {
+  margin-top: 31px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 136px;
 }
 .logo_icon {
   width: 130px;
@@ -615,17 +676,21 @@ h1, .next_title {
   font-size: 28px;
 }
 .title_block {
-  width: 90%;
+  width: 100%;
 }
-.next_title{
-  margin-top: 4%;
+.next_title span {
+  margin-top: 30px;
+  margin-left: 8%;
+}
+.buttons {
+  margin-top: 78px;
+  margin-bottom: 73px;
 }
 .button {
-  margin-bottom: 10px;
   width: 285px;
-  height: 36px;
-  padding: 9px;
-  margin-left: 2%;
+  padding: 5px;
+  margin-left: 0;
+  margin-right: 0;
 }
 .button_content{
   display: flex;
@@ -645,9 +710,10 @@ h1, .next_title {
 }
 .content {
   width: 100%;
-  margin-top: 40px;
-  margin-bottom: 40px; 
-  padding-left: 5%; 
+  margin-top: 60px;
+  margin-bottom: 50px; 
+  margin-left: 20px;
+  margin-right: 20px; 
 }
 .wrapper, .container {
   background-color: #fafafa;
@@ -658,8 +724,10 @@ h1, .next_title {
 .main_heading {
   width: 100%;
   font-size: 50px;
-  padding-left: 5%; 
-  margin-bottom: 75%;
+  margin-bottom: 243px;
+  margin-top: 22px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 .heading {
   font-size: 23px;
@@ -667,33 +735,45 @@ h1, .next_title {
 .num {
   font-size: 13px;
 }
-.underline {
-  border: 2px solid #8f7bc8;
+.num:after {
+    content: "";
+    display: block;
+    border: 2px solid #8f7bc8;
+    border-radius: 4px;
 }
-.underline_3 {
-  border: 1px solid white;
+.num_2:after {
+    content: "";
+    display: block;
+    border: 2px solid #fff;
+    border-radius: 4px;
 }
 .text {
   font-size: 15px;
-  width: 95%
+  width: 100%;
+  line-height: 18px;
+  letter-spacing: 0.5px;
 }  
 .container_content {
   width: 100%;
-  margin-left: 5%;  
+  margin-top: 60px;
+  margin-bottom: 57px; 
+  margin-left: 20px;
+  margin-right: 20px;
 }  
 .heading_area {
   width: 100%;
-  margin-left: 0; 
+  margin-left: 20px; 
+  margin-right: 20px;
 }
 .image {
-  top: 12%;
-  left: 23%; 
-  width: 50%;
+  top: 7%;
+  left: 20%; 
+  width: 66%;
 }
 .section_image {
-  right: 10%;
+  right: 2%;
   top: 10%;
-  width: 85%;
+  width: 95%;
 } 
 .card_img {
  width: 100%;
@@ -717,9 +797,10 @@ h1, .next_title {
   height: auto;
 }
 .article {
-  padding-top: 50px;
-  padding-bottom: 50px; 
-  width: 85%; 
+  padding-top: 37px;
+  padding-bottom: 77px; 
+  width: 100%; 
+  margin: 0 20px;
 }
 h2 {
   font-size: 28px;
@@ -727,13 +808,27 @@ h2 {
 }
 .paragraph {
   font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
 }
 .square {
   width: 70px;
-  height: 70px;
-  left: 5%;
-  top: 52%; 
+  left: 6.2%;
+  top: 48%; 
+  padding: 26px 0;
 } 
+.find_cont_square {
+  width: 70px;
+  left: 6.2%;
+  top: 50%; 
+  padding: 26px 0;
+}
+.work_it_square {
+  width: 70px;
+  left: 6.2%;
+  top: 47%; 
+  padding: 26px 0;
+}
 .count {
   font-size: 14px;
   font-family: "OpenSans-Bold", sans-serif;
@@ -741,49 +836,41 @@ h2 {
   border-bottom: 3px solid #8f7bc8;
 }  
 .footer {
-  height: 600px;
-   min-width: 320px;
-   width: 100%;
+  width: 100%;
   background-image: url(../images/game_767.jpg); 
 }
 .footer:before {
   content: "";
-  min-width: 320px;
   width: 100%;
-  min-height: 600px;
-}
+} 
 .footer_content {
-  min-height: 566px;  
-}  
+  margin: 0 auto;
+}
 .app_block {
   justify-content: center;
   width: 95%;
   margin: 0;
 }
 .app_button_area {
-    margin-top: 18%;
-    margin-bottom: 15%;
+    margin-top: 98px;
+    margin-bottom: 57px;
   }
   .download_app_button {
   width: 74px; 
   height: 74px;
 }
-
 .logo_icon_app {
   width: 58px;
 }
-
 .download_text {
-    margin-left: 0;
-    width: 90%;
-  margin-bottom: 15%;
-}
-  
-  .app_head_area {
-     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
+  margin-left: 0;
+  width: 90%;
+} 
+.app_head_area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
   }
 .app_head {
   font-size: 32px;
@@ -798,6 +885,14 @@ h2 {
   }
 .app_text {
   font-size: 14px;
+}
+.footer_buttons {
+  margin-top: 67px;
+  margin-bottom: 82px;
+}
+.footer_logo {
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 .logo_icon {
   width: 137px;
