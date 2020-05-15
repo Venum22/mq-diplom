@@ -8,9 +8,12 @@ body {
 *::before {
   box-sizing: border-box;
 }
-а { 
+a { 
   text-decoration: none; 
 } 
+a:active, a:focus { 
+	outline: none; 
+}
 p {
   font-family: "OpenSans-Regular", sans-serif;
 }
@@ -64,7 +67,9 @@ p {
   align-items: center;
   position: relative;
   width: 85%;
-  justify-content: center;
+  max-width: 1557px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .logo {
   width: 100%;
@@ -86,6 +91,7 @@ p {
 .title_block {
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .title {
   font-family: "OpenSans-Bold", sans-serif;
@@ -97,13 +103,15 @@ p {
 	font-family: "OpenSans-Bold", sans-serif;
 	font-weight: 600;
 	color: #fff;
-	text-transform: uppercase;
-  display: block;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
-  margin-left: 14%;
+  word-break: break-all;
 }
 h1 {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   font-size: 90px;
   color: #fff;
   text-transform: uppercase;
@@ -184,12 +192,12 @@ h1 {
   box-sizing: border-box; 
   width: 100%;
 }
-.wrapper:nth-child(n+4){
+.wrapper_2:nth-child(n+2){
   background-color: #f6f4fa;
 }
-.wrapper:nth-child(n+5){
+.wrapper_3:nth-child(n+3){
   background-color: #5e42b0;
-  color: white;
+  color: #fff;
 }
 .content {
   width: 48%;
@@ -212,43 +220,9 @@ h1 {
   margin-top: 5%;
   margin-bottom: 2%;
 }
-.point {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: start;
-  align-items: center;
-}
-.num, .num_2 {
-  font-size: 18px;
-  font-family: "OpenSans-Bold", sans-serif;
-  margin: 0;
-  color: black;
-}
-.num:after {
-  content: "";
-  display: block;
-  border: 3px solid #8f7bc8;
-  border-radius: 4px;
-}
-.num_2:after{
-  content: "";
-  display: block;
-  border: 3px solid #fff;
-  border-radius: 4px;
-}
-.num_3 {
-  color: #8f7bc8;
-  margin: 0;
-}
-.num_3:after {
-  content: "";
-  display: block;
-  border: 2px solid #fff;
-  border-radius: 4px;
-}
 .heading_block {
-  width: 50%;
-  margin-left: 15px;
+  margin-left: 30px;
+  width: 100%;
 }
 .heading {
   font-family: "OpenSans-Bold", sans-serif;
@@ -256,10 +230,68 @@ h1 {
   color: #c1c1c1;
   text-transform: uppercase;
   margin: 0;
+  position: relative;
+}
+.heading_1:before {
+ content: "\0030 \0031";
+ display: block;
+ color: #000000;
+    top: 27px;
+    left: -30px;
+    position: relative;
+    font-size: 18px;
+}
+.heading_1:after {
+	content: "";
+	display: block;
+    width: 21px;
+    border: 3px solid #8f7bc8;
+    border-radius: 5px;
+    position: relative;
+    top: -16px;
+    left: -30px;
+}
+.heading_2:before {
+ content: "\0030 \0032";
+ display: block;
+ color: #000000;
+    top: 27px;
+    left: -30px;
+    position: relative;
+    font-size: 18px;
+}
+.heading_2:after {
+	content: "";
+	display: block;
+    width: 21px;
+    border: 3px solid #8f7bc8;
+    border-radius: 5px;
+    position: relative;
+    top: -16px;
+    left: -30px;
+}
+.heading_3:before {
+ content: "\0030 \0033";
+ display: block;
+ color: #000000;
+    top: 27px;
+    left: -30px;
+    position: relative;
+    font-size: 18px;
+}
+.heading_3:after {
+	content: "";
+	display: block;
+    width: 21px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    position: relative;
+    top: -16px;
+    left: -30px;
 }
 .text {
   font-family: "OpenSans-Regular", sans-serif;
-  width: 75%;
+  width: 95%;
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 2px;
@@ -292,6 +324,63 @@ h1 {
 .container:nth-child(n+5){
   background-color: #0a0e34;
   color: #fff;
+}
+.heading_4:before {
+ content: "\0030 \0031";
+ display: block;
+ color: #000000;
+    top: 27px;
+    left: -30px;
+    position: relative;
+    font-size: 18px;
+}
+.heading_4:after {
+	content: "";
+	display: block;
+    width: 21px;
+    border: 3px solid #8f7bc8;
+    border-radius: 5px;
+    position: relative;
+    top: -16px;
+    left: -30px;
+}
+.heading_5:before {
+ content: "\0030 \0032";
+ display: block;
+ color: #000000;
+    top: 27px;
+    left: -30px;
+    position: relative;
+    font-size: 18px;
+}
+.heading_5:after {
+	content: "";
+	display: block;
+    width: 21px;
+    border: 3px solid #8f7bc8;
+    border-radius: 5px;
+    position: relative;
+    top: -16px;
+    left: -30px;
+}
+.heading_6:before {
+ content: "\0030 \0033";
+ display: block;
+ color: #8f7bc8;
+    top: 27px;
+    left: -30px;
+    position: relative;
+    font-size: 18px;
+}
+.heading_6:after {
+	content: "";
+	display: block;
+    width: 21px;
+    border: 3px solid #fff;
+    border-radius: 5px;
+    position: relative;
+    top: -16px;
+    left: -30px;
 }
 .container_content {
   margin-left: 10%;
@@ -425,12 +514,10 @@ h2 {
 }
 .app_block {
   display: flex;
-  flex-wrap: wrap;
   text-align: center;
-  justify-content: center;
-  align-items: center; 
   width: 95%;
   margin-top: 23%;
+  justify-content: center;
 } 
 .download_app_button {
   display: flex;
@@ -439,17 +526,21 @@ h2 {
   width: 134px; 
   height: 137px;
   background: #5e42b0;
-  border-radius: 20px;
+  border-radius: 30px;
+  box-shadow: inset 0 0 6px;
 }
 .download_app_button:hover .logo_icon_app {
   fill: #c1c1c1;
+}
+.download_app_button:focus {
+	outline: none;
 }
 .logo_icon_app {
   width: 100px;
   fill: white;
 }
 .download_text {
-  margin-left: 50px;
+  margin-left: 30px;
 }
 .app_head {
   display: flex;
@@ -462,11 +553,10 @@ h2 {
   margin: 0;
   width: 100%;
 }
+.app_text_area {
+	text-align: center;
+}
 .app_text {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: start;
   color: #a496ca;
   text-transform: uppercase;
   font-family: "OpenSans-Regular", sans-serif;
@@ -476,13 +566,6 @@ h2 {
 .footer_buttons {
   margin-top: 120px;
   margin-bottom: 232px;
-}
-.logo {
-  width: 70%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
 }
 .logo_icon {
   width: 190px;
@@ -503,6 +586,10 @@ h2 {
 }
  h1, .next_title {
    font-size: 64px;
+   word-break: normal;
+}
+.next_title {
+	margin-left: 17%;
 }
 .logo {
   margin-top: 38px;
@@ -521,7 +608,7 @@ h2 {
   width: 35px;
 }
 .content {
-  width: 60%;
+  width: 66%;
   margin-top: 40px;
   margin-bottom: 40px;
 }
@@ -539,11 +626,20 @@ h2 {
 }
 .image {
   top: 13%;
-  left: -17%; 
+  left: -19%; 
   width: 60%;
 }
 .heading {
   font-size: 32px;
+}
+.heading_1:after, 
+.heading_2:after, 
+.heading_3:after,
+.heading_4:after,
+.heading_5:after,
+.heading_6:after {
+	top: -11px;
+    left: -30px;
 }
 .heading_area {
   margin-left: 4%;
@@ -561,7 +657,7 @@ h2 {
 }
 .section_image {
   right: -10px;
-  top: -30px;
+  top: -5px;
   width: 64%;
 }
 .card_modul {
@@ -612,6 +708,7 @@ h2 {
 } 
 .download_text {
 	margin: 0;
+	margin-left: 30px;
 }
 .app_text {
   display: block;
@@ -627,6 +724,8 @@ h2 {
 }
 .app_block {
   margin-top: 125px;
+  display: flex;
+   flex-wrap: wrap;
 }
 .button_text_top {
   font-family: "OpenSans-Light", sans-serif;
@@ -678,9 +777,9 @@ h1, .next_title {
 .title_block {
   width: 100%;
 }
-.next_title span {
-  margin-top: 30px;
-  margin-left: 8%;
+.next_title {
+  margin-top: 20px;
+  margin-left: 18%;
 }
 .buttons {
   margin-top: 78px;
@@ -716,7 +815,13 @@ h1, .next_title {
   margin-right: 20px; 
 }
 .wrapper, .container {
-  background-color: #fafafa;
+  background-color: #fafafa;  
+}
+.wrapper:nth-child(3) {
+	margin-top: -55px;
+}
+.container:nth-child(3) {
+	margin-top: -30px;
 }
 .heading_block {
   width: 80%;
@@ -724,7 +829,6 @@ h1, .next_title {
 .main_heading {
   width: 100%;
   font-size: 50px;
-  margin-bottom: 243px;
   margin-top: 22px;
   margin-left: 20px;
   margin-right: 20px;
@@ -732,20 +836,26 @@ h1, .next_title {
 .heading {
   font-size: 23px;
 }
-.num {
-  font-size: 13px;
+.heading_1:after,
+.heading_2:after,
+.heading_3:after,
+.heading_4:after,
+.heading_5:after,
+.heading_6:after {
+	width: 16px;
+    border-width: 2px;
+    top: -10px;
+    left: -30px;
 }
-.num:after {
-    content: "";
-    display: block;
-    border: 2px solid #8f7bc8;
-    border-radius: 4px;
-}
-.num_2:after {
-    content: "";
-    display: block;
-    border: 2px solid #fff;
-    border-radius: 4px;
+.heading_1:before,
+.heading_2:before,
+.heading_3:before,
+.heading_4:before,
+.heading_5:before,
+.heading_6:before {
+	top: 18px;
+    left: -30px;
+    font-size: 14px;
 }
 .text {
   font-size: 15px;
@@ -753,6 +863,9 @@ h1, .next_title {
   line-height: 18px;
   letter-spacing: 0.5px;
 }  
+.container:nth-child(n+5) {
+	margin-bottom: 299px;
+}
 .container_content {
   width: 100%;
   margin-top: 60px;
@@ -762,35 +875,40 @@ h1, .next_title {
 }  
 .heading_area {
   width: 100%;
-  margin-left: 20px; 
-  margin-right: 20px;
+  margin: 0;
 }
 .image {
   top: 7%;
   left: 20%; 
   width: 66%;
+  position: relative;
 }
 .section_image {
-  right: 2%;
+  left: 1%;
   top: 10%;
   width: 95%;
+  position: relative;
 } 
 .card_img {
  width: 100%;
  height: 353px;
  background-image: url(../images/be-active_640.jpg); 
+ margin-top: -370px;
 }
 .card_modul:nth-child(n){
   order: 1;
 }
 .text_modul:nth-child(n){
   order: 2;
+  margin-bottom: 300px;
 }
 .find_contact_img {
   background-image: url(../images/find-contact_640.jpg);
+  margin-top: -370px;
 }
 .work_it_img{
   background-image: url(../images/work-it_640.jpg);
+  margin-top: -370px;
 } 
 .text_modul {
   width: 100%;
@@ -813,10 +931,27 @@ h2 {
 }
 .square {
   width: 70px;
-  left: 6.2%;
-  top: 48%; 
+  left: 6.2%; 
   padding: 26px 0;
+  position: relative;
+  z-index: 22;
 } 
+.square:focus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    background-color: #5e42b0;
+    position: absolute;
+    left: calc(50% - 170px/2);
+    top: calc(50% - 156px);
+    webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 60px 0;
+}
 .find_cont_square {
   width: 70px;
   left: 6.2%;
@@ -838,6 +973,7 @@ h2 {
 .footer {
   width: 100%;
   background-image: url(../images/game_767.jpg); 
+  margin-top: -300px;
 }
 .footer:before {
   content: "";
@@ -849,6 +985,7 @@ h2 {
 }
 .app_block {
   justify-content: center;
+  flex-wrap: wrap;
   width: 95%;
   margin: 0;
 }
@@ -859,6 +996,7 @@ h2 {
   .download_app_button {
   width: 74px; 
   height: 74px;
+  border-radius: 16px;
 }
 .logo_icon_app {
   width: 58px;
