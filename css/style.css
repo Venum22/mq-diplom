@@ -1,7 +1,9 @@
+
 body {
   background-color: #fff;
   margin: 0;
-	padding: 0;
+  padding: 0;
+  overflow-x: hidden !important; 
 }
 *,
 *::after, 
@@ -708,13 +710,13 @@ h2 {
 } 
 .download_text {
 	margin: 0;
-	margin-left: 30px;
 }
 .app_text {
   display: block;
 }
 .app_button_area {
   padding-bottom: 80px;
+  margin-right: 30px;
 }
 .app_head_area {
   display: flex;
