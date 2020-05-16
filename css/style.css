@@ -3,6 +3,7 @@ body {
   background-color: #fff;
   margin: 0;
   padding: 0;
+  overflow: auto;
   overflow-x: hidden !important; 
 }
 *,
@@ -659,8 +660,8 @@ h2 {
 }
 .section_image {
   right: -10px;
-  top: -5px;
-  width: 64%;
+  top: -63px;
+  width: 60%;
 }
 .card_modul {
   width: 100%;
